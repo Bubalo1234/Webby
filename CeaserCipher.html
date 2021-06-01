@@ -2,6 +2,28 @@
 <html>
   <head>
     <title> Ceaser Cipher </title>
+    
+    <script>
+      
+      var SYMBOLS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnop"
+      
+      function transform(mode){
+        var message = document.getElementById("textInput").value;
+        var key = document.parseInt("keyInput").value;
+        var newmessage;
+        key = key * mode;
+        
+        var startingindex
+        var newindex
+        
+        for (i in message) {
+          console.log(message[i])
+          
+        }
+        
+      }
+    </script>
+    
   </head>
   <body>
     <h1> Ceaser Cipher </h1>
@@ -10,7 +32,9 @@
     <input id="textInput" value = "Type the key here">
     <br>
     <br>
-    <button>Encrypt</button>
-    <button>Decrypt</button>
+    <button onclick="transform(1)">Encrypt</button>
+    <button onclick="transform(-1)">Decrypt</button>
+    <br>
+    <div id="result"></div>
   </body>
 </html>
